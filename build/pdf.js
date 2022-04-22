@@ -1329,9 +1329,9 @@ MessageHandler.prototype = {
   },
   postMessage: function postMessage(message, transfers) {
     if (transfers && this.postMessageTransfers) {
-      this.comObj.postMessage(JSON.parse(JSON.stringify(message)), transfers);
+      this.comObj.postMessage(message, transfers);
     } else {
-      this.comObj.postMessage(JSON.parse(JSON.stringify(message)));
+      this.comObj.postMessage(message);
     }
   },
   destroy: function destroy() {
